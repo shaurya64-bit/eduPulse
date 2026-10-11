@@ -1,0 +1,137 @@
+import { StudentRecord } from '../types/student';
+
+export const INITIAL_STUDENTS: Omit<StudentRecord, 'id'>[] = [
+  // Class 6
+  {
+    studentName: 'Aarav Sharma',
+    class: 'Class 6',
+    userId: 'STU601',
+    userPassword: 'parent@601',
+    todaysAttendance: 'Present',
+    pendingFeesAmount: 150,
+    todaysTopicCovered: 'Mathematics: Introduction to Fractions and Decimals (Exercises 4.1 to 4.3). Science: Components of Food and Balanced Diet chart assignment.',
+    examResult: 'Term 1 Exam: 92% (Grade A+) | Math: 96/100, Science: 90/100, English: 90/100. Teacher Remarks: Outstanding performance and very active participation in class discussions.',
+    rollNumber: '06-01',
+    parentName: 'Ramesh Sharma',
+    parentPhone: '+1 (555) 234-5678',
+    parentEmail: 'ramesh.sharma@example.com',
+    recentAlert: 'Reminder: Term 1 lab record submission due this Friday.',
+    lastUpdated: new Date().toISOString()
+  },
+  {
+    studentName: 'Sophia Miller',
+    class: 'Class 6',
+    userId: 'STU602',
+    userPassword: 'parent@602',
+    todaysAttendance: 'Absent',
+    pendingFeesAmount: 320,
+    todaysTopicCovered: 'English: Figurative language & Poetry analysis. Social Studies: Early Civilizations of the Indus Valley.',
+    examResult: 'Term 1 Exam: 84% (Grade A) | Math: 82/100, Science: 86/100, English: 88/100. Teacher Remarks: Great creative writing skills; needs consistent practice with mental arithmetic.',
+    rollNumber: '06-02',
+    parentName: 'David Miller',
+    parentPhone: '+1 (555) 345-6789',
+    parentEmail: 'david.miller@example.com',
+    recentAlert: 'Attendance Alert: Sophia was marked absent today. Please send leave slip if sick.',
+    lastUpdated: new Date().toISOString()
+  },
+  {
+    studentName: 'Liam Chen',
+    class: 'Class 6',
+    userId: 'STU603',
+    userPassword: 'parent@603',
+    todaysAttendance: 'Present',
+    pendingFeesAmount: 0,
+    todaysTopicCovered: 'Science: States of Matter and condensation experiment. Mathematics: Prime Factorization and HCF word problems.',
+    examResult: 'Term 1 Exam: 95% (Grade A+) | Math: 98/100, Science: 95/100, English: 92/100. Teacher Remarks: Exemplary grasp of scientific concepts. Role model student.',
+    rollNumber: '06-03',
+    parentName: 'Wei Chen',
+    parentPhone: '+1 (555) 456-7890',
+    parentEmail: 'wei.chen@example.com',
+    recentAlert: 'Fees cleared! Thank you for the timely annual fee payment.',
+    lastUpdated: new Date().toISOString()
+  },
+
+  // Class 7
+  {
+    studentName: 'Ananya Patel',
+    class: 'Class 7',
+    userId: 'STU701',
+    userPassword: 'parent@701',
+    todaysAttendance: 'Present',
+    pendingFeesAmount: 200,
+    todaysTopicCovered: 'Algebra: Linear equations in one variable with real-world problems. History: The Mughal Empire administrative reforms.',
+    examResult: 'Mid-Term Exam: 89% (Grade A) | Math: 91/100, Science: 88/100, Social Studies: 88/100. Teacher Remarks: Very diligent and detail-oriented student.',
+    rollNumber: '07-01',
+    parentName: 'Suresh Patel',
+    parentPhone: '+1 (555) 567-8901',
+    parentEmail: 'suresh.patel@example.com',
+    recentAlert: 'Fee Reminder: Term 2 installment of $200 is due by end of the month.',
+    lastUpdated: new Date().toISOString()
+  },
+  {
+    studentName: 'Ethan Johnson',
+    class: 'Class 7',
+    userId: 'STU702',
+    userPassword: 'parent@702',
+    todaysAttendance: 'Late',
+    pendingFeesAmount: 0,
+    todaysTopicCovered: 'Biology: Cell structure, Plant vs Animal Cells under microscope. Geography: Atmosphere layers and pressure belts.',
+    examResult: 'Mid-Term Exam: 78% (Grade B+) | Math: 75/100, Science: 82/100, English: 77/100. Teacher Remarks: Good practical aptitude in laboratory; focus needed on mathematical proofs.',
+    rollNumber: '07-02',
+    parentName: 'Sarah Johnson',
+    parentPhone: '+1 (555) 678-9012',
+    parentEmail: 'sarah.johnson@example.com',
+    recentAlert: 'Notice: Arrived 15 minutes late today for first period assembly.',
+    lastUpdated: new Date().toISOString()
+  },
+
+  // Class 10
+  {
+    studentName: 'Rohan Verma',
+    class: 'Class 10',
+    userId: 'STU1001',
+    userPassword: 'parent@1001',
+    todaysAttendance: 'Present',
+    pendingFeesAmount: 450,
+    todaysTopicCovered: 'Physics: Electricity (Ohm\'s Law, Series & Parallel resistance calculations). Chemistry: Carbon and its allotropes & covalent bonding.',
+    examResult: 'Pre-Board 1: 94% (Grade A+) | Physics: 96/100, Chemistry: 94/100, Math: 98/100, English: 88/100. Teacher Remarks: Top scorer in Science & Math! On track for board exam distinction.',
+    rollNumber: '10-01',
+    parentName: 'Vikram Verma',
+    parentPhone: '+1 (555) 789-0123',
+    parentEmail: 'vikram.verma@example.com',
+    recentAlert: 'Important: Board examination registration verification form signed and submitted.',
+    lastUpdated: new Date().toISOString()
+  },
+  {
+    studentName: 'Maya Rodriguez',
+    class: 'Class 10',
+    userId: 'STU1002',
+    userPassword: 'parent@1002',
+    todaysAttendance: 'Absent',
+    pendingFeesAmount: 0,
+    todaysTopicCovered: 'Mathematics: Quadratic Equations and discriminant method. English Literature: Julius Caesar Act III scene 2 rhetorical speech analysis.',
+    examResult: 'Pre-Board 1: 91% (Grade A+) | Physics: 88/100, Chemistry: 90/100, Math: 92/100, English: 94/100. Teacher Remarks: Exceptional language mastery and analytical reasoning skills.',
+    rollNumber: '10-02',
+    parentName: 'Elena Rodriguez',
+    parentPhone: '+1 (555) 890-1234',
+    parentEmail: 'elena.rodriguez@example.com',
+    recentAlert: 'Attendance Alert: Maya was marked absent for today\'s preparatory test.',
+    lastUpdated: new Date().toISOString()
+  },
+  {
+    studentName: 'Zain Malik',
+    class: 'Class 10',
+    userId: 'STU1003',
+    userPassword: 'parent@1003',
+    todaysAttendance: 'Present',
+    pendingFeesAmount: 550,
+    todaysTopicCovered: 'Mathematics: Coordinate Geometry & Section Formula. Physics: Magnetic Effects of Electric Current and Fleming\'s Left-Hand rule.',
+    examResult: 'Pre-Board 1: 82% (Grade A) | Physics: 84/100, Chemistry: 79/100, Math: 85/100, English: 80/100. Teacher Remarks: Solid improvement in Problem-solving speed; recommend revision on Chemistry reactions.',
+    rollNumber: '10-03',
+    parentName: 'Tariq Malik',
+    parentPhone: '+1 (555) 901-2345',
+    parentEmail: 'tariq.malik@example.com',
+    recentAlert: 'Fee Alert: Outstanding tuition fee $550 past due. Please settle via portal.',
+    lastUpdated: new Date().toISOString()
+  }
+];

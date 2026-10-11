@@ -1,0 +1,75 @@
+{
+  "entities": {
+    "Student": {
+      "title": "Student",
+      "description": "Student academic, attendance, fee, and parent login record.",
+      "type": "object",
+      "properties": {
+        "studentName": {
+          "type": "string",
+          "description": "Full name of the student",
+          "maxLength": 100
+        },
+        "class": {
+          "type": "string",
+          "description": "Assigned class/grade e.g. Class 6, Class 7, Class 10",
+          "maxLength": 30
+        },
+        "userId": {
+          "type": "string",
+          "description": "Unique parent login identifier for the student",
+          "maxLength": 50
+        },
+        "userPassword": {
+          "type": "string",
+          "description": "Parent login credentials for the student account",
+          "maxLength": 100
+        },
+        "todaysAttendance": {
+          "type": "string",
+          "description": "Attendance status for today: Present or Absent",
+          "enum": ["Present", "Absent", "Late", "Excused"]
+        },
+        "pendingFeesAmount": {
+          "type": "number",
+          "description": "Outstanding school fees balance in currency units"
+        },
+        "todaysTopicCovered": {
+          "type": "string",
+          "description": "Summary of lessons, topics, and homework covered today in class",
+          "maxLength": 1000
+        },
+        "examResult": {
+          "type": "string",
+          "description": "Exam result details, scores, grades, and academic remarks",
+          "maxLength": 1000
+        },
+        "lastUpdated": {
+          "type": "string",
+          "description": "ISO timestamp of the latest update"
+        },
+        "recentAlert": {
+          "type": "string",
+          "description": "Optional active notice or alert message for parent notification banner",
+          "maxLength": 300
+        }
+      },
+      "required": [
+        "studentName",
+        "class",
+        "userId",
+        "userPassword",
+        "todaysAttendance",
+        "pendingFeesAmount",
+        "todaysTopicCovered",
+        "examResult"
+      ]
+    }
+  },
+  "firestore": {
+    "/students/{studentId}": {
+      "schema": "Student",
+      "description": "Collection storing student profiles, attendance, fee, and academic progress."
+    }
+  }
+}

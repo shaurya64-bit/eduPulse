@@ -1,0 +1,6 @@
+{
+  "name": "EduPulse - Real-time School Management System",
+  "description": "Modern School Management Application with real-time student records, single master edit control for admins, and private parent portal.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

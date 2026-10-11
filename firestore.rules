@@ -1,0 +1,14 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Test connection check
+    match /test/connection {
+      allow read, write: if true;
+    }
+
+    // Students collection rules
+    match /students/{studentId} {
+      allow read, write: if true;
+    }
+  }
+}
